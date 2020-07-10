@@ -9,6 +9,7 @@ from item import Item, ItemList
 app = Flask(__name__)
 app.config['PROPAGATE_EXCEPTIONS'] = True
 app.config['JWT_AUTH_URL_RULE'] = '/login'
+app.config['JWT_EXPIRATION_DELTA'] = timedelta(seconds=2000)
 app.secret_key = 'gary23w'
 api = Api(app)
 
